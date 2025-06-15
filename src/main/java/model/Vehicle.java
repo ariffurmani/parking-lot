@@ -3,12 +3,12 @@ package model;
 public class Vehicle {
     private String licensePlate;
     private VehicleType vehicleType;
-    private Ticket ticket;
+    private String ownerName;
 
-    public Vehicle(String licensePlate, VehicleType vehicleType, Ticket ticket) {
+    public Vehicle(String licensePlate, VehicleType vehicleType, String ownerName) {
         this.licensePlate = licensePlate;
         this.vehicleType = vehicleType;
-        this.ticket = ticket;
+        this.ownerName = ownerName;
     }
 
     public String getLicensePlate() {
@@ -19,7 +19,7 @@ public class Vehicle {
         return vehicleType;
     }
 
-    public Ticket getTicket() {
-        return ticket;
+    public String getOwnerName() {
+        return ownerName;
     }
 }

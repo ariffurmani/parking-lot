@@ -2,10 +2,11 @@ package model;
 
 public class ParkingSlot {
     private String slotId;
-    private String vehicleType;
-    private boolean isOccupied;
+    private String slotNumber;
+    private VehicleType vehicleType;
+    private Status parkingSlotStatus;
 
-    public ParkingSlot(String slotId, String vehicleType) {
+    public ParkingSlot(String slotId, VehicleType vehicleType) {
         this.slotId = slotId;
         this.vehicleType = vehicleType;
         this.isOccupied = false;

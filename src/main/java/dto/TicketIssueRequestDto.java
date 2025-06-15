@@ -10,13 +10,15 @@ public class TicketIssueRequestDto {
     private String entryGateId;
     private Date entryTime;
     private String operatorId;
+    private String parkingLotId;
 
-    public TicketIssueRequestDto(String vehicleNumber, VehicleType vehicleType, String entryGateId, Date entryTime, String operatorId) {
+    public TicketIssueRequestDto(String vehicleNumber, VehicleType vehicleType, String entryGateId, Date entryTime, String operatorId, String parkingLotId) {
         this.vehicleNumber = vehicleNumber;
         this.vehicleType = vehicleType;
         this.entryGateId = entryGateId;
         this.entryTime = entryTime;
         this.operatorId = operatorId;
+        this.parkingLotId = parkingLotId;
     }
 
     // Getters
@@ -35,5 +37,7 @@ public class TicketIssueRequestDto {
     public String getOperatorId() {
         return operatorId;
     }
-
+    public String getParkingLotId() {
+        return parkingLotId;
+    }
 }

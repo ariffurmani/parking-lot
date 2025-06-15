@@ -22,6 +22,7 @@ public class TicketController {
                 ticketIssueRequestDto.getEntryTime(),
                 ticketIssueRequestDto.getOperatorId());
 
+
         return responseDto;
     }
 

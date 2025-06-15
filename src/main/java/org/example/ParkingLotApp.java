@@ -14,7 +14,7 @@ public class ParkingLotApp {
 
         TicketController controller = new TicketController(new TicketServiceImpl());
         // Example usage of the controller to issue a ticket
-         TicketIssueRequestDto requestDto = new TicketIssueRequestDto("ABC123", VehicleType.FOUR_WHEELER, "GATE1", new Date(), "OPERATOR1");
+         TicketIssueRequestDto requestDto = new TicketIssueRequestDto("ABC123", VehicleType.FOUR_WHEELER, "GATE1", new Date(), "OPERATOR1", "001");
          TicketIssueResponseDto responseDto = controller.issueTicket(requestDto);
          System.out.println("Ticket issued: " + responseDto.getTicketId());
 
