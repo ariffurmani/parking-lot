@@ -1,25 +1,17 @@
 package model;
 
-public class Payment {
-    private String paymentId;
+public class Payment extends BaseModel {
     private PaymentMode paymentMode;
     private double amount;
     private String thirdPartyTransactionId;
 
-    public Payment(String paymentId, PaymentMode paymentMode, double amount, String thirdPartyTransactionId) {
-        this.paymentId = paymentId;
+    public Payment(PaymentMode paymentMode, double amount, String thirdPartyTransactionId) {
         this.paymentMode = paymentMode;
         this.amount = amount;
         this.thirdPartyTransactionId = thirdPartyTransactionId;
     }
 
     // Generate Getters and Setters
-    public String getPaymentId() {
-        return paymentId;
-    }
-    public void setPaymentId(String paymentId) {
-        this.paymentId = paymentId;
-    }
     public PaymentMode getPaymentMode() {
         return paymentMode;
     }

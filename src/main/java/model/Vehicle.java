@@ -1,6 +1,6 @@
 package model;
 
-public class Vehicle {
+public class Vehicle extends BaseModel {
     private String licensePlate;
     private VehicleType vehicleType;
     private String ownerName;

@@ -1,19 +1,17 @@
 package model;
 
-public class Operator {
-    private String id;
+public class Operator extends BaseModel {
     private String name;
 
-    public Operator(String id, String name) {
-        this.id = id;
+    public Operator(String name) {
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

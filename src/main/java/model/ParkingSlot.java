@@ -1,34 +1,36 @@
 package model;
 
-public class ParkingSlot {
-    private String slotId;
+public class ParkingSlot extends BaseModel {
     private String slotNumber;
     private VehicleType vehicleType;
     private Status parkingSlotStatus;
 
-    public ParkingSlot(String slotId, VehicleType vehicleType) {
-        this.slotId = slotId;
+    public ParkingSlot(VehicleType vehicleType) {
         this.vehicleType = vehicleType;
-        this.isOccupied = false;
+        this.parkingSlotStatus = Status.AVAILABLE;
     }
 
-    public String getSlotId() {
-        return slotId;
+    public String getSlotNumber() {
+        return slotNumber;
     }
 
-    public String getVehicleType() {
+    public void setSlotNumber(String slotNumber) {
+        this.slotNumber = slotNumber;
+    }
+
+    public VehicleType getVehicleType() {
         return vehicleType;
     }
 
-    public boolean isOccupied() {
-        return isOccupied;
+    public void setVehicleType(VehicleType vehicleType) {
+        this.vehicleType = vehicleType;
     }
 
-    public void occupy() {
-        this.isOccupied = true;
+    public Status getParkingSlotStatus() {
+        return parkingSlotStatus;
     }
 
-    public void vacate() {
-        this.isOccupied = false;
+    public void setParkingSlotStatus(Status parkingSlotStatus) {
+        this.parkingSlotStatus = parkingSlotStatus;
     }
 }

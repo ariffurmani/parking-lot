@@ -2,54 +2,44 @@ package model;
 
 import java.util.Date;
 
-public class Bill {
-    private String billId;
-    private String vehicleId;
-    private String ticketId;
-    private String paymentId;
+public class Bill extends BaseModel {
+    private Vehicle vehicle;
+    private Ticket ticket;
+    private Payment payment;
     private double amount;
     private Date exitTime;
 
-    public Bill(String billId, String vehicleId, String ticketId, String paymentId, double amount, Date exitTime) {
-        this.billId = billId;
-        this.vehicleId = vehicleId;
-        this.ticketId = ticketId;
-        this.paymentId = paymentId;
+    public Bill(Vehicle vehicle, Ticket ticket, Payment payment, double amount, Date exitTime) {
+        this.vehicle = vehicle;
+        this.ticket = ticket;
+        this.payment = payment;
         this.amount = amount;
         this.exitTime = exitTime;
     }
 
     // Getters and Setters
-    public String getBillId() {
-        return billId;
+    public Vehicle getVehicle() {
+        return vehicle;
     }
 
-    public void setBillId(String billId) {
-        this.billId = billId;
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 
-    public String getVehicleId() {
-        return vehicleId;
+    public Ticket getTicket() {
+        return ticket;
     }
 
-    public void setVehicleId(String vehicleId) {
-        this.vehicleId = vehicleId;
+    public void setTicket(Ticket ticket) {
+        this.ticket = ticket;
     }
 
-    public String getTicketId() {
-        return ticketId;
+    public Payment getPayment() {
+        return payment;
     }
 
-    public void setTicketId(String ticketId) {
-        this.ticketId = ticketId;
-    }
-
-    public String getPaymentId() {
-        return paymentId;
-    }
-
-    public void setPaymentId(String paymentId) {
-        this.paymentId = paymentId;
+    public void setPayment(Payment payment) {
+        this.payment = payment;
     }
 
     public double getAmount() {

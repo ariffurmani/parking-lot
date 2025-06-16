@@ -5,8 +5,7 @@ import service.FindSlotStrategyImpl;
 
 import java.util.List;
 
-public class ParkingLot {
-    private String id;
+public class ParkingLot extends BaseModel {
     private int capacity;
     private List<VehicleType> supportedVehicleTypes;
     private Status status;
@@ -14,21 +13,12 @@ public class ParkingLot {
     private List<ParkingFloor> parkingFloors;
     private FindSlotStrategy findSlotStrategy = new FindSlotStrategyImpl();
 
-    public ParkingLot(String id, int capacity, List<VehicleType> supportedVehicleTypes, Status status, List<Gate> gates, List<ParkingFloor> parkingFloors) {
-        this.id = id;
+    public ParkingLot(int capacity, List<VehicleType> supportedVehicleTypes, Status status, List<Gate> gates, List<ParkingFloor> parkingFloors) {
         this.capacity = capacity;
         this.supportedVehicleTypes = supportedVehicleTypes;
         this.status = status;
         this.gates = gates;
         this.parkingFloors = parkingFloors;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public int getCapacity() {

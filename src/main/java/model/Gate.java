@@ -1,28 +1,22 @@
 package model;
 
-public class Gate {
-    private String id;
+public class Gate extends  BaseModel {
     private GateType type;
     private GateStatus status;
     private Operator operator;
 
-    public Gate(String id, GateType type, Operator operator, GateStatus status) {
-        this.id = id;
+    public Gate(GateType type, Operator operator, GateStatus status) {
         this.type = type;
         this.operator = operator;
         this.status = status;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public GateType getType() {
         return type;
     }
 
-    public Operator getOperator() {
-        return operator;
+    public void setType(GateType type) {
+        this.type = type;
     }
 
     public GateStatus getStatus() {
@@ -33,7 +27,11 @@ public class Gate {
         this.status = status;
     }
 
-    public void setoperator(Operator operator) {
+    public Operator getOperator() {
+        return operator;
+    }
+
+    public void setOperator(Operator operator) {
         this.operator = operator;
     }
 }

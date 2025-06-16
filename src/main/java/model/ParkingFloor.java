@@ -2,9 +2,9 @@ package model;
 
 import java.util.List;
 
-public class ParkingFloor {
-    private int floorNumber;
-    private int totalSlots;
+public class ParkingFloor extends BaseModel {
+    private final int floorNumber;
+    private final int totalSlots;
     private int availableSlots;
     private List<ParkingSlot> parkingSlots;
     private Status parkingFloorStatus;
@@ -16,7 +16,7 @@ public class ParkingFloor {
         this.totalSlots = totalSlots;
         this.availableSlots = totalSlots; // Initially all slots are available
         this.supportedVehicleTypes = supportedVehicleTypes;
-        this.parkingFloorStatus = Status.ACTIVE; // Default status
+        this.parkingFloorStatus = Status.AVAILABLE; // Default status
     }
 
     public int getFloorNumber() {
