@@ -1,25 +1,37 @@
 package model;
 
 public class Vehicle extends BaseModel {
-    private String licensePlate;
+    private String vehicleNumber;
     private VehicleType vehicleType;
     private String ownerName;
 
-    public Vehicle(String licensePlate, VehicleType vehicleType, String ownerName) {
-        this.licensePlate = licensePlate;
+    public Vehicle(String vehicleNumber, VehicleType vehicleType, String ownerName) {
+        this.vehicleNumber = vehicleNumber;
         this.vehicleType = vehicleType;
         this.ownerName = ownerName;
     }
 
-    public String getLicensePlate() {
-        return licensePlate;
+    public String getVehicleNumber() {
+        return vehicleNumber;
+    }
+
+    public void setVehicleNumber(String vehicleNumber) {
+        this.vehicleNumber = vehicleNumber;
     }
 
     public VehicleType getVehicleType() {
         return vehicleType;
     }
 
+    public void setVehicleType(VehicleType vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
     public String getOwnerName() {
         return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
     }
 }

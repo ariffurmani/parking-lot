@@ -12,15 +12,23 @@ public class VehicleRepositoryImpl implements VehicleRepository {
     HashMap<String, Vehicle> map = new HashMap<>();
 
     @Override
-    public Optional<Vehicle> findById(String id) {
-        // Implementation to find a vehicle by its ID
-        return Optional.empty(); // Placeholder for actual implementation
+    public Optional<Vehicle> findByVehicleNumber(String id) {
+        // Implementation to find a vehicle by its vehicle number
+        if (map.containsKey(id)) {
+            return Optional.of(map.get(id));
+        } else {
+            return Optional.empty();
+        }
     }
 
     @Override
     public void save(Vehicle vehicle) {
         // Implementation to save a vehicle
-        // Placeholder for actual implementation
+        if (vehicle != null && vehicle.getVehicleNumber() != null) {
+            map.put(vehicle.getVehicleNumber(), vehicle);
+        } else {
+            throw new IllegalArgumentException("Vehicle or Vehicle Number cannot be null");
+        }
     }
 
 //    @Override

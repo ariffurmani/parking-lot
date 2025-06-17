@@ -10,7 +10,7 @@ public class Ticket extends BaseModel {
     private Operator entryOperator;
 
     // Constructor
-    public Ticket(String id, Vehicle vehicle, ParkingSlot parkingSlot, Date entryTime, Gate entryGate, Operator entryOperator) {
+    public Ticket(Vehicle vehicle, ParkingSlot parkingSlot, Date entryTime, Gate entryGate, Operator entryOperator) {
         this.vehicle = vehicle;
         this.parkingSlot = parkingSlot;
         this.entryTime = entryTime;
