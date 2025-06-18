@@ -5,9 +5,10 @@ public class ParkingSlot extends BaseModel {
     private VehicleType vehicleType;
     private Status parkingSlotStatus;
 
-    public ParkingSlot(VehicleType vehicleType) {
+    public ParkingSlot(VehicleType vehicleType, String slotNumber) {
         this.vehicleType = vehicleType;
         this.parkingSlotStatus = Status.AVAILABLE;
+        this.slotNumber = slotNumber;
     }
 
     public String getSlotNumber() {

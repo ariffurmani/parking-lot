@@ -11,12 +11,13 @@ public class ParkingFloor extends BaseModel {
     private List<VehicleType> supportedVehicleTypes;
 
 
-    public ParkingFloor(int floorNumber, int totalSlots, List<VehicleType> supportedVehicleTypes) {
+    public ParkingFloor(int floorNumber, int totalSlots, List<VehicleType> supportedVehicleTypes, List<ParkingSlot> parkingSlots) {
         this.floorNumber = floorNumber;
         this.totalSlots = totalSlots;
         this.availableSlots = totalSlots; // Initially all slots are available
         this.supportedVehicleTypes = supportedVehicleTypes;
         this.parkingFloorStatus = Status.AVAILABLE; // Default status
+        this.parkingSlots = parkingSlots;
     }
 
     public int getFloorNumber() {

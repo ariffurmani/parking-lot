@@ -1,8 +1,7 @@
-package service;
+package repository;
 
 import model.ParkingLot;
 
-import java.util.HashMap;
 import java.util.Optional;
 
 public interface ParkingLotRepository {

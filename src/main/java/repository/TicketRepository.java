@@ -1,7 +1,7 @@
-package service;
+package repository;
 
 import model.Ticket;
 
-public interface TickerRepository {
+public interface TicketRepository {
     public Ticket save(Ticket ticket);
 }

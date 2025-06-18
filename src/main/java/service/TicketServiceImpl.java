@@ -3,9 +3,9 @@ package service;
 import dto.TicketIssueResponseDto;
 import model.*;
 import repository.GateRepository;
-import repository.GateRepositoryImpl;
+import repository.ParkingLotRepository;
+import repository.TicketRepository;
 import repository.VehicleRepository;
-import repository.VehicleRepositoryImpl;
 
 import java.util.Date;
 import java.util.Optional;
@@ -16,9 +16,9 @@ public class TicketServiceImpl implements TicketService {
     VehicleRepository vehicleRepository;
     FindSlotStrategy findSlotStrategy;
     ParkingLotRepository parkingLotRepository;
-    TickerRepository ticketRepository;
+    TicketRepository ticketRepository;
 
-    public TicketServiceImpl(GateRepository gateRepository, VehicleRepository vehicleRepository, FindSlotStrategy findSlotStrategy, ParkingLotRepository parkingLotRepository, TickerRepository ticketRepository) {
+    public TicketServiceImpl(GateRepository gateRepository, VehicleRepository vehicleRepository, FindSlotStrategy findSlotStrategy, ParkingLotRepository parkingLotRepository, TicketRepository ticketRepository) {
         this.gateRepository = gateRepository;
         this.vehicleRepository = vehicleRepository;
         this.findSlotStrategy = findSlotStrategy;
@@ -60,6 +60,8 @@ public class TicketServiceImpl implements TicketService {
             return response;
         }
         ParkingSlot slot = findSlotStrategy.findSlot(vehicleType, parkingLot.get());
+
+        System.out.println("Slot found: " + slot.getSlotNumber() + " for vehicle type: " + vehicleType);
 
         Ticket ticket = new Ticket(vehicle, slot, entryTime, gateOptional.get(), gateOptional.get().getOperator());
 

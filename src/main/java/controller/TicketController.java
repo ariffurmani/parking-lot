@@ -16,14 +16,12 @@ public class TicketController {
     }
 
     public TicketIssueResponseDto issueTicket(TicketIssueRequestDto ticketIssueRequestDto) {
-        TicketIssueResponseDto responseDto = ticketService.issueTicket(ticketIssueRequestDto.getVehicleNumber(),
+        return ticketService.issueTicket(ticketIssueRequestDto.getVehicleNumber(),
                 ticketIssueRequestDto.getVehicleType(),
                 ticketIssueRequestDto.getEntryGateId(),
                 ticketIssueRequestDto.getEntryTime(),
                 ticketIssueRequestDto.getOperatorId());
 
-
-        return responseDto;
     }
 
 }
